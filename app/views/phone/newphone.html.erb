@@ -1,0 +1,20 @@
+<h1>add new phone number</h1>
+<%= form_for @pbook, :url => {:controler => "phone", :action => "create"} do |f| %>
+
+<div class = "field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+<div class = "field">
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
+</div>
+<div class = "field">
+  <%= f.label :birthday %>
+  <%= f.text_field :birthday %>
+</div>
+<div class = "field">
+  <%= f.submit %>
+</div>
+<% end %>
+<p><%= link_to "Back", phone_index_path %></p>

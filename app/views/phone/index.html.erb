@@ -1,0 +1,13 @@
+<h1>Phonebook</h1>
+<p>
+<% @phones.each do |p|%>
+<ul>
+  <li><%= p.name %></li>
+  <li><%= p.phone %></li> 
+  <li><%= p.birthday %></li>
+  <li><%= link_to "edit", :action => "edit", :id => p %></li>
+</ul>
+<% end %>
+<p><%= link_to "add new phone number", phone_newphone_path %></p>
+</p>
+
